@@ -1,5 +1,4 @@
 package controllers;
-
 import models.Grade;
 import models.Student;
 import models.Teacher;
@@ -12,8 +11,6 @@ public class TeacherController {
     public TeacherController(Teacher t) {
         this.teacher = t;
     }
-
-    // FIX: Now creates a proper Grade record instead of blindly overwriting CGPA
     public void inputGrade(String studentId, String dept, String batch,
                            String semester, String courseId, double gradeValue) {
         User u = DataStore.getInstance().getUser(studentId);
